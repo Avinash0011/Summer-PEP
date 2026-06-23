@@ -3,58 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tailwind Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>This is the top most heading</h1>
-    <h2>This is the 2 heading</h2>
-    <h3>This is the 3 heading</h3>
-    <h4>This is the 4 heading</h4>
-    <!-- h5 and h6 are not used anymore -->
-    <h5>This is the 5 heading</h5>
-    <h6>This is the 6! heading</h6>
 
-    <p>This is a paragraph. It is used to write text. It is the most basic element of HTML.</p>
+<body >
 
-    <span>This is a span. It is used to write text. It is the most basic element of HTML.</span>
 
-    <br>
 
-    <strong>This is a strong. It is used to write text. It is the most basic element of HTML.</strong>
-<br>
+    <!-- Headings -->
+    <h1 class="text-3xl font-bold text-center text-blue-600">This is the top most heading</h1>
+    <h2 class="text-2xl text-center font-semibold mt-4">This is the 2 heading</h2>
+    <h3 class="text-xl text-center mt-2">This is the 3 heading</h3>
+    <h4 class="text-lg text-center mt-2">This is the 4 heading</h4>
+    <h5 class="text-base text-center mt-2">This is the 5 heading</h5>
+    <h6 class="text-sm text-center mt-2">This is the 6 heading</h6>
 
-    <img src="images.jpg" alt="Image description">
-<br>
-    <audio controls>
+    <!-- Paragraph -->
+    <p class="mt-4 text-center text-gray-700">
+        This is a paragraph. It is used to write text. It is the most basic element of HTML.
+    </p>
+
+    <!-- Span -->
+    <span class="text-red-500 text-center font-medium">This is a span text</span>
+
+    <!-- Strong -->
+    <p class="mt-2">
+        <strong class="font-bold text-center text-green-600">This is strong text</strong>
+    </p>
+
+    <!-- Image -->
+    <img src="images.jpg" class="mx-auto mt-4 rounded-lg shadow" alt="Image">
+
+    <!-- Audio -->
+    <audio controls class="mx-auto mt-4">
         <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
     </audio>
-<br>
 
+    <!-- Video CENTERED -->
+    <div class="flex justify-center mt-6">
+        <video controls class="w-1/2 rounded-lg shadow">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
 
-    <video controls centered>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video element.
-    </video>
-
-    <ul>
+    <!-- Lists -->
+    <ul class="list-disc ml-6 mt-4">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
 
-    <ol>
+    <ol class="list-decimal ml-6 mt-4">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
     </ol>
 
-    <dl>
-        <dt>Term 1</dt>
-        <dd>Definition 1</dd>
-        <dt>Term 2</dt>
-        <dd>Definition 2</dd>
+    <!-- Description List -->
+    <dl class="mt-4">
+        <dt class="font-bold">Term 1</dt>
+        <dd class="ml-4">Definition 1</dd>
+        <dt class="font-bold mt-2">Term 2</dt>
+        <dd class="ml-4">Definition 2</dd>
     </dl>
+
+    <!-- Card Section -->
+    <div class="mt-6 text-center">
+<img src="images1.jpg" class="mx-auto w-200 h-190 rounded shadow rounded-full" alt="Messi">
+        <h1 class="text-blue-500 font-bold text-3xl mt-2">Lionel Messi</h1>
+        <p>Lionel Andrés "Leo" Messi[note 1] (born 24 June 1987) is an Argentine professional footballer who plays as a forward for and captains both the Major League Soccer club Inter Miami and the Argentina national team. Widely regarded as one of the greatest players in history, Messi has set numerous records for individual accolades won throughout his professional footballing career, including eight Ballons d'Or, six European Golden Shoes, and eight times being named the world's best player by FIFA.[note 2] In 2025, he was named the All Time Men's World Best Player by the IFFHS.</p>
+    </div>
+  
+
+    <!-- form -->
+      <form class="mt-6 flex flex-col items-center gap-3" action="/submit" method="POST"> 
+        <input type="text" placeholder="Username" class="border p-2 rounded w-1/2">
+        <input type="password" placeholder="Password" class="border p-2 rounded w-1/2">
+        <input type="submit" value="Submit" class="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-600">
+    </form>
+
 
 
 </body>
