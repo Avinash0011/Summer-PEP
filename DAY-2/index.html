@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- inline css -->
+    <style>
+        /* declare variables in css (globle) */
+        :root{
+            --red-color: rgb(255, 0, 0);
+            --blue-color: rgb(0, 0, 255);
+
+        }
+        /* univeral selector */
+        *{
+            background-color: rgb(87, 198, 231);
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        /* id selecter */
+        #para1{
+            color: black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: justify;
+            font-size: 1.2rem;
+            margin: 2rem;
+        }
+        /* Element/Tag selector */
+        h1{
+            /* text-align: center; */
+            font-size: 3rem;
+            margin-top: 2rem;
+        }
+        /* class Selector */
+        .para{
+            color: black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: justify;
+            font-size: 1.2rem;
+            margin: 2rem;
+        }
+        .box{
+            width: 500px;
+            height: 30px;
+            background-color: rgb(255, 0, 0);
+            margin: 2rem auto;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px black;
+            
+        }
+        /* Grouping Selector */
+        h1, p, div{
+            margin: 2rem;
+            text-align: center
+        }
+        /* Descendant Selector */
+        main1 h1{
+            color: white;
+        }
+        /* Child Selector */
+        main2 > section > h1 > p{
+            color: black;
+        }
+        .c1{
+            color: var(--blue-color);
+        }
+        .c2{
+            color: var(--red-color);
+        }
+
+        /* Attribute Selector */
+        input[type="text"]{
+            height: 40px;
+            width: 100px;
+            background-color: aqua;
+            color: black;
+            border-radius: 10px;
+        }
+        input[type="password"]{
+            height: 40px;
+            width: 100px;
+            background-color:wheat;
+            color: black;
+            border-radius: 10px;
+            &&:focus{
+                background-color: white;
+                color: black;
+            }
+        }
+
+        button{
+            height: 40px;
+            width: 100px;
+            color: black;
+            background-color: palevioletred;
+            border-radius: 50px;
+            font-size: large;
+            transition: all 0.3s ease-in-out;
+
+        }
+        button:hover{
+            background-color: palevioletred;
+            color: black;
+            transform: scale(1.2);
+        }
+      
+        li:first-child{
+            color: red;
+        }
+        li:last-child{
+            color: blue;
+        }
+        li:nth-child(3){
+            color: green;
+        }
+
+        .box1{
+            border-radius: 10px;
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            /* padding-left: 20px; */
+            border: 10px groove black;
+            /* border-width: 10px 20px 30px 50px; */
+            /* border-style: groove; */
+            /* border-color: red; */
+            margin: 30px;
+            /* margin:30px 40px 50px 60px; */
+            /* outline: 10px solid black; */
+            /* box-sizing: content-box; */ /*by default in box model */
+            /* box-sizing: border-box; */ /* content + padding + border = width + height */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lionel Messi</h1>
+    <p id="para1">
+        Lionel Andrés "Leo" Messi[note 1] (born 24 June 1987) is an Argentine professional footballer who plays as a forward for and captains both the Major League Soccer club Inter Miami and the Argentina national team. Widely regarded as one of the greatest players in history, Messi has set numerous records for individual accolades won throughout his professional footballing career, including eight Ballons d'Or, six European Golden Shoes, and eight times being named the world's best player by FIFA.[note 2] In 2025, he was named the All Time Men's World Best Player by the IFFHS.
+    </p>
+     <p class="para">
+        Lionel Andrés "Leo" Messi[note 1] (born 24 June 1987) is an Argentine professional footballer who plays as a forward for and captains both the Major League Soccer club Inter Miami and the Argentina national team. Widely regarded as one of the greatest players in history, Messi has set numerous records for individual accolades won throughout his professional footballing career, including eight Ballons d'Or, six European Golden Shoes, and eight times being named the world's best player by FIFA.[note 2] In 2025, he was named the All Time Men's World Best Player by the IFFHS.
+    </p>
+    <div class="box">Box1</div>
+    <div class="box">Box2</div>
+    <div class="box">Box3</div>
+
+    <main id="main1">
+        <section>
+            <h1>Section 1</h1>
+    </main>
+    <main id="main2">
+        <section>
+            <h1>Section 1</h1>
+            <p>This is the first section of the main content.</p>
+    </main>
+    <p class="c1 c2">This text is red using CSS variable.</p>
+
+<div>
+     <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</div>
+    
+
+
+<div> 
+    <input type="text">
+    <input type="password">
+    <button>Submit</button>
+</div>
+<div class="box1">Box1</div>
+    
+</body>
+</html>
+
+<!-- flex
+box-flex -->

@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+}
+ul{
+    background-color: lightblue;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:30px;
+    font-size: x-large;
+    color: white;
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: background-color 0.2s ease-out;
+    height: 100px;
+}
+.img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
